@@ -1,0 +1,84 @@
+\documentclass[10pt]{article}
+
+%\usepackage{times}
+\usepackage[pdftex]{graphicx}
+\usepackage{xcolor}
+%\usepackage{pslatex}
+
+\usepackage[pdftex]{hyperref} % must be last package listed
+
+% set the PDF-Document-Info section (access by ctrl+D in Acrobat Reader)
+\hypersetup{
+pdfauthor = {Brian Burns},
+pdftitle = {Music Flash Cards},
+pdfsubject = {},
+pdfkeywords = {flash cards, music drill, business cards},
+pdfcreator = {LaTeX with embedded PDF images},
+pdfproducer = {pdflatex}
+}
+
+\pagestyle{empty} % empty header and footer
+
+% set page size
+\pdfpagewidth 8.5in
+\pdfpageheight 11in 
+
+% LaTeX assumes that the origin is 1in down from the top of the paper 
+% and 1in in from the lefthand side of the paper. \hoffset and \voffset, 
+% which should be used for resetting the origin, will be ignored in the following.
+% (this didn't work)
+%\hoffset 0in
+%\voffset 0in
+
+% Note that there's no explicit way to set the right margin on a page.
+% But you can control the left margin (with \oddsidemargin and \evensidemargin) 
+% and the width of the text (with \textwidth), which implicity controls the right margin.
+%\topmargin      -0.50in
+\topmargin      -0.5in % 0.5-1
+\oddsidemargin   -0.25in % 0.75-1
+%\evensidemargin  0.75in
+% Height and width of main text box.
+\textwidth       7.00in
+\textheight     10.00in
+
+% header and footer
+\headheight 0in 
+\headsep 0in
+%\footheight 0in
+\footskip 0in
+
+\itemindent      0.00in
+\parindent       0.00in
+
+\begin{document}
+
+% define a function to import a our PDF files.
+% the number in brackets is the number of arguments.
+% #1 is where the argument gets substituted.
+% to pass a single digit can just say \card3, for instance.
+% otherwise would need brackets around parameter, eg \card{foo}.
+\newcommand{\card}[1]{\framebox(3.5,2.0){\includegraphics{cards/card#1.pdf}}}
+
+% Use \makebox for invisible boxes, or \framebox to draw outlines.
+\color{lightgray}{ % light gray lines
+\fboxrule=0.1mm % width of line for frameboxes
+
+\setlength{\unitlength}{1in} % sets units to use
+\begin{picture}(7.0,10.0) % width and height
+\put(00.0,08.0){\card0}
+\put(03.5,08.0){\card1}
+\put(00.0,06.0){\card2}
+\put(03.5,06.0){\card3}
+\put(00.0,04.0){\card4}
+\put(03.5,04.0){\card5}
+\put(00.0,02.0){\card6}
+\put(03.5,02.0){\card7}
+\put(00.0,00.0){\card8}
+\put(03.5,00.0){\card9}
+\end{picture}
+
+} %color
+
+\end{document}
+
+
