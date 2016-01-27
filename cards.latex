@@ -1,3 +1,7 @@
+
+% music flash cards
+% generate pdf for 8.5x11'' business card template with 10 3.5x2'' cards
+
 \documentclass[10pt]{article}
 
 %\usepackage{times}
