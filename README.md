@@ -19,4 +19,7 @@ The pdf is generated from a LaTeX file which incorporates the individual images,
 which were generated from Lilypond using a Ruby script.
 
 
+## License ##
+
+[Creative Commons Attribution Share Alike 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
