@@ -16,7 +16,7 @@ plain cardstock or paper.
 ## Code ##
 
 The pdf is generated from a LaTeX file which incorporates the individual images,
-which were generated from Lilypond using a Ruby script (to be added here).
+which were generated from Lilypond using a Ruby script.
 
 
 
